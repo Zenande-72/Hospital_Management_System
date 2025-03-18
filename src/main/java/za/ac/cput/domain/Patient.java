@@ -1,9 +1,10 @@
 package za.ac.cput.domain;
 
-//Hospital Management System
-//Patient Class
-//By:Zenande Kalipa - 230012035
-//Github : Zenande-72
+/*Hospital Management System
+Patient Class
+By:Zenande Kalipa - 230012035
+Github : Zenande-72
+ */
 
 public class Patient {
 
