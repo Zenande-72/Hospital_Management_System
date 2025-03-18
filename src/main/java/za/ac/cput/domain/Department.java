@@ -1,5 +1,12 @@
 package za.ac.cput.domain;
 
+/*
+Department.java
+Department Class
+Author: Dean Jantjies 222644702
+Date: 18 March 2025
+*/
+
 import java.util.ArrayList;
 
 public class Department {
