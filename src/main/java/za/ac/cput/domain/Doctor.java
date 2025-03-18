@@ -1,5 +1,11 @@
 package za.ac.cput.domain;
 
+/*Doctor.java
+Doctor Model Class
+Author: Ashlyn Jordan January (230577644)
+Date: 18th March 2025
+ */
+
 public class Doctor {
     private String firstName;
     private String lastName;
