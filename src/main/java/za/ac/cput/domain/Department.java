@@ -1,3 +1,10 @@
+/*
+Department.java
+Department Model Class
+Author: Dean Jantjies (222644702)
+Date: 18 March 2025
+*/
+
 package za.ac.cput.domain;
 
 import java.util.ArrayList;
@@ -50,7 +57,6 @@ public class Department {
     public List<Appointments> getAppointments() {
         return appointments;
     }
-
     */
 
     @Override
