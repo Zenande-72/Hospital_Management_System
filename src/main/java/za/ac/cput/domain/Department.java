@@ -50,6 +50,7 @@ public class Department {
     public List<Appointments> getAppointments() {
         return appointments;
     }
+
     */
 
     @Override
