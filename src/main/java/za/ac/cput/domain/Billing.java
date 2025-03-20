@@ -1,6 +1,11 @@
 package za.ac.cput.domain;
 
 import java.util.Date;
+/* Billing.Java
+   Billing Class
+   Author: Aviwe Jaxa 222208546
+   Date: 18 March 2025
+ */
 
 public class Billing {
     private String billId;
