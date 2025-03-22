@@ -15,7 +15,7 @@ public class Doctor {
     private String hospitalAffiliation;
     private String email;
     private String gender;
-    private Boolean availability;
+    private String availability;
 
     public Doctor() {
 
@@ -57,7 +57,7 @@ public class Doctor {
     public String getGender() {
         return gender;
     }
-    public Boolean getAvailability() {
+    public String getAvailability() {
         return availability;
     }
 
@@ -85,7 +85,7 @@ public class Doctor {
         private String hospitalAffiliation;
         private String email;
         private String gender;
-        private Boolean availability;
+        private String availability;
 
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
@@ -127,7 +127,7 @@ public class Doctor {
             return this;
         }
 
-        public Builder setAvailability(Boolean availability) {
+        public Builder setAvailability(String availability) {
             this.availability = availability;
             return this;
         }
