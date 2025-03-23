@@ -1,5 +1,7 @@
 package za.ac.cput.util;
 import java.util.regex.Pattern;
+
+
 /*
 Helper.java
 Helper Class
@@ -18,11 +20,12 @@ public class Helper {
 
 
 
-
-    public static boolean isValidEmail(String email){
+        public static boolean isValidEmail(String email){
         if(email == null){
             throw new UnsupportedOperationException("Email cannot be Null!!!");
         }
         return EMAIL_PATTERN.matcher(email).matches();
     }
+
+
 }

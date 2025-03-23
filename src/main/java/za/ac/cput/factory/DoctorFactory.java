@@ -10,7 +10,9 @@ Date: 22 March 2025
 */
 
 public class DoctorFactory {
-public static Doctor createDoctor(String firstName, String lastName, String specialization,int licenceNumber,int yearsOfExperience,String hospitalAffiliation, String email, String gender, String availability) {
+public static Doctor createDoctor(String firstName, String lastName, String specialization
+        ,int licenceNumber,int yearsOfExperience
+        ,String hospitalAffiliation, String email, String gender, String availability) {
     if (Helper.isNullOrEmpty(firstName) ||
             Helper.isNullOrEmpty(lastName) ||
             Helper.isNullOrEmpty(specialization) ||
