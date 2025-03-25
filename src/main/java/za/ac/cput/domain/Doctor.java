@@ -7,6 +7,7 @@ Date: 18 March 2025
 */
 
 public class Doctor {
+    private String doctorID;
     private String firstName;
     private String lastName;
     private String specialization;
@@ -32,7 +33,11 @@ public class Doctor {
         this.availability = builder.availability;
     }
 
-    public String getFirstName() {
+    public String getDoctorID() {
+    return doctorID;
+}
+
+        public String getFirstName() {
         return firstName;
     }
 
@@ -64,7 +69,8 @@ public class Doctor {
     @Override
     public String toString() {
         return "Doctor{" +
-                "firstName='" + firstName + '\'' +
+                "doctorID='" + doctorID + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", specialization='" + specialization + '\'' +
                 ", licenceNumber=" + licenceNumber +
@@ -72,11 +78,12 @@ public class Doctor {
                 ", hospitalAffiliation='" + hospitalAffiliation + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
-                ", availability=" + availability +
+                ", availability='" + availability + '\'' +
                 '}';
     }
 
     public static class Builder {
+        private String doctorID;
         private String firstName;
         private String lastName;
         private String specialization;
@@ -87,6 +94,10 @@ public class Doctor {
         private String gender;
         private String availability;
 
+        public Builder doctorID(String doctorID) {
+            this.doctorID = doctorID;
+            return this;
+        }
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
@@ -133,6 +144,7 @@ public class Doctor {
         }
 
         public Builder copy(Doctor doctor) {
+            this.doctorID = doctor.getDoctorID();
             this.firstName = doctor.getFirstName();
             this.lastName = doctor.getLastName();
             this.specialization = doctor.getSpecialization();

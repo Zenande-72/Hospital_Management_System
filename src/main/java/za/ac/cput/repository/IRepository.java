@@ -1,6 +1,10 @@
 package za.ac.cput.repository;
-
-import za.ac.cput.domain.Doctor;
+/*
+IRepository.java interface
+IRepository Interface
+Author: Ashlyn Jordan January 230577644
+Date: 25 March 2025
+*/
 
 public interface IRepository <T, ID>{
 
@@ -10,5 +14,5 @@ public interface IRepository <T, ID>{
 
     T update(T t);
 
-    T delete(ID id);
+    boolean delete(ID id);
 }
