@@ -2,13 +2,13 @@ package za.ac.cput.repository;
 
 import za.ac.cput.domain.Doctor;
 
-public interface IRepository {
+public interface IRepository <T, ID>{
 
-    void create(Doctor doctor);
+    T create(T t);
 
-    void read(String firstName, String lastName, String specialization);
+    T read(ID id);
 
-    void  update(Doctor doctor);
+    T update(T t);
 
-    void delete(String doctor);
+    T delete(ID id);
 }
