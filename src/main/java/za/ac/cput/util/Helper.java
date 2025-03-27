@@ -1,6 +1,6 @@
 package za.ac.cput.util;
 import java.util.regex.Pattern;
-
+import java.util.UUID;
 
 /*
 Helper.java
@@ -26,6 +26,8 @@ public class Helper {
         }
         return EMAIL_PATTERN.matcher(email).matches();
     }
-
+    public static String generateId() {
+        return UUID.randomUUID().toString();
+    }
 
 }
