@@ -32,8 +32,8 @@ public class AppointmentFactory {
         }
 
         return new Appointment.AppointmentBuilder().setAppointmentID(appointmentID)
-                .setpatientID(patientID)
-                .setPatientFistName(patientFirstName)
+                .setPatientID(patientID)
+                .setPatientFirstName(patientFirstName)
                 .setPatientLastName(patientLastName)
                 .setAppointmentType(appointmentType)
                 .setAppointmentStatus(AppointmentStatus)
