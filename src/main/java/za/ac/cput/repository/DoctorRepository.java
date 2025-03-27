@@ -1,5 +1,6 @@
 package za.ac.cput.repository;
 
+import za.ac.cput.domain.Department;
 import za.ac.cput.domain.Doctor;
 /*
 DoctorRepository.java
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DoctorRepository implements IDoctorRepository{
-    private static IDoctorRepository repository= null;
+    private static DoctorRepository repository= null;
 
     private List<Doctor> doctorList;
 
@@ -30,49 +31,41 @@ public class DoctorRepository implements IDoctorRepository{
 
     @Override
     public Doctor create(Doctor doctor) {
-        boolean success = doctorList.add(doctor);
-        if(success){
-            return doctor;
-        }
-        return null;
+        this.doctorList.add(doctor);
+        return doctor;
     }
 
     @Override
-    public Doctor read(String id) {
-        for (Doctor d : doctorList) {
-            if (d.getDoctorID().equals(id)) {
-                return d;
-            }
-        }
-        return null;
+    public Doctor read(String doctorId) {
+
+        return this.doctorList.stream()
+                .filter(d -> d.getDoctorID().equals(doctorId))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override
     public Doctor update(Doctor doctor) {
         String id = doctor.getDoctorID();
-        Doctor doctorOld = read(id);
-        if (doctorOld == null)
-            return null;
-
-        boolean success = delete(id);
-        if (success) {
-            if (doctorList.add(doctor)) {
-                return doctor;
-
-
-            }
-
+        Doctor doctorOld = read(doctor.getDoctorID());
+        if (doctorOld != null) {
+            doctorList.remove(doctorOld);
+            doctorList.add(doctor);
+            return doctor;
         }
         return null;
+
     }
 
 
     @Override
-    public boolean delete(String id) {
-        Doctor doctorToDelete = read(id);
-        if(doctorToDelete==null)
-            return false;
-        return(doctorList.remove(doctorToDelete));
+    public boolean delete(String doctorId) {
+        Doctor doctorToDelete = read(doctorId);
+        if(doctorToDelete!=null) {
+            doctorList.remove(doctorToDelete);
+            return true;
+        }
+        return false;
     }
 
     @Override

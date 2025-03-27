@@ -94,10 +94,11 @@ public class Doctor {
         private String gender;
         private String availability;
 
-        public Builder doctorID(String doctorID) {
+        public Builder setdoctorID(String doctorID) {
             this.doctorID = doctorID;
             return this;
         }
+
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
@@ -160,6 +161,7 @@ public class Doctor {
         public Doctor build() {
             return new Doctor(this);
         }
+
     }
 
     }
