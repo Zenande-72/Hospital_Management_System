@@ -10,15 +10,11 @@ Date: 22 March 2025
 */
 
 public class DoctorFactory {
-    public static Doctor createDoctor(String doctorID, String firstName, String lastName, String specialization
-            , int licenceNumber, int yearsOfExperience
-            , String hospitalAffiliation, String email, String gender, String availability) {
-        if (Helper.isNullOrEmpty(firstName) ||
-                Helper.isNullOrEmpty(lastName) ||
-                Helper.isNullOrEmpty(specialization) ||
-                Helper.isNullOrEmpty(hospitalAffiliation) ||
-                Helper.isNullOrEmpty(gender) ||
-                Helper.isNullOrEmpty(availability) || Helper.isNullOrEmpty(doctorID)) {
+    public static Doctor createDoctor(String doctorID, String firstName, String lastName, String specialization,
+                                      int licenceNumber, int yearsOfExperience,
+                                      String hospitalAffiliation, String email, String gender, String availability) {
+
+        if (doctorID == null || firstName == null || lastName == null || specialization == null || hospitalAffiliation == null || gender == null || availability == null) {
             return null;
         }
 
@@ -32,7 +28,7 @@ public class DoctorFactory {
             throw new IllegalArgumentException("Last name cannot be empty.");
         }
         if (licenceNumber < 0) {
-            throw new IllegalArgumentException("licence Number cannot be negative.");
+            throw new IllegalArgumentException("Licence Number cannot be negative.");
         }
         if (specialization.isEmpty()) {
             throw new IllegalArgumentException("Specialization cannot be empty.");
@@ -47,10 +43,14 @@ public class DoctorFactory {
             throw new IllegalArgumentException("Availability cannot be empty.");
         }
 
-        if (Helper.isNullOrEmpty(email))
+        if (Helper.isNullOrEmpty(email)) {
             return null;
+        }
 
-        return new Doctor.Builder().setFirstName(firstName)
+
+        return new Doctor.Builder()
+                .setdoctorID(doctorID)
+                .setFirstName(firstName)
                 .setLastName(lastName)
                 .setSpecialization(specialization)
                 .setHospitalAffiliation(hospitalAffiliation)
@@ -59,7 +59,5 @@ public class DoctorFactory {
                 .setLicenceNumber(licenceNumber)
                 .setYearsOfExperience(yearsOfExperience)
                 .build();
-
-
     }
 }
