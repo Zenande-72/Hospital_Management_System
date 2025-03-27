@@ -13,28 +13,35 @@ Date: 22 March 2025
  */
 
 public class AppointmentFactory {
-    public static Appointment createAppointment(int appointmentID, String appointmentType, String status,
-                                                LocalDate date, LocalTime time, String appointReason, String paymentStatus) {
 
-        if ( appointmentID <= 0 ||
+
+    public static Appointment createAppointment(String appointmentID, String patientID, String patientFirstName, String patientLastName, String appointmentType,
+                                                String AppointmentStatus, LocalDate AppointmentDate, LocalTime AppointmentTime, String appointReason, String paymentStatus) {
+
+        if (    Helper.isNullOrEmpty(appointmentID) ||
+                Helper.isNullOrEmpty(patientID) ||
+                Helper.isNullOrEmpty(patientFirstName) ||
+                Helper.isNullOrEmpty(patientLastName) ||
                 Helper.isNullOrEmpty(appointmentType) ||
-                Helper.isNullOrEmpty(status) ||
-                date == null ||
-                time == null ||
+                Helper.isNullOrEmpty(AppointmentStatus) ||
                 Helper.isNullOrEmpty(appointReason) ||
                 Helper.isNullOrEmpty(paymentStatus)) {
             return null;
         }
 
-            return new Appointment.AppointmentBuilder()
-                    .setAppointmentID(appointmentID)
-                    .setAppointmentType(appointmentType)
-                    .setStatus(status)
-                    .setDate(date)
-                    .setTime(time)
-                    .setAppointReason(appointReason)
-                    .setPaymentStatus(paymentStatus)
-                    .build();
+        return new Appointment.AppointmentBuilder().setAppointmentID(appointmentID)
+                .setpatientID(patientID)
+                .setPatientFistName(patientFirstName)
+                .setPatientLastName(patientLastName)
+                .setAppointmentType(appointmentType)
+                .setAppointmentStatus(AppointmentStatus)
+                .setAppointmentDate(AppointmentDate)
+                .setAppointmentTime(AppointmentTime)
+                .setAppointReason(appointReason)
+                .setPaymentStatus(paymentStatus)
+                .build();
+
+
 
         }
     }
