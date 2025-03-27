@@ -1,4 +1,6 @@
 package za.ac.cput.util;
+import org.apache.commons.validator.routines.EmailValidator;
+
 import java.util.regex.Pattern;
 import java.util.UUID;
 
@@ -21,6 +23,7 @@ public class Helper {
 
 
         public static boolean isValidEmail(String email){
+        EmailValidator emailValidator = EmailValidator.getInstance();
         if(email == null){
             throw new UnsupportedOperationException("Email cannot be Null!!!");
         }

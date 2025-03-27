@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 /*
-DoctorRepository.java
-DoctorRepository Class
+DoctorRepositoryTest.java
+DoctorRepositoryTest Class
 Author: Ashlyn Jordan January 230577644
-Date: 25 March 2025
+Date: 27 March 2025
 */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class DoctorRepositoryTest {
