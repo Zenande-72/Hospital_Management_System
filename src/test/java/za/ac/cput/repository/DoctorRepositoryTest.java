@@ -7,7 +7,7 @@ DoctorRepository Class
 Author: Ashlyn Jordan January 230577644
 Date: 25 March 2025
 */
-
+@TestMethodOrder(MethodOrderer.MethodName.class)
 class DoctorRepositoryTest {
 
     @Test
