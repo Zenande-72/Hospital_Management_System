@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63c6d962-3f1e-478e-a69d-6a91b493b63a" name="Changes" comment="My Basecode" />
+    <list default="true" id="f07c7a39-7943-418a-89ea-13abc758df8b" name="Changes" comment="Jamie Code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -28,12 +27,12 @@
     &quot;assignee&quot;: &quot;ViweJax&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ViweJax/Hospital_Management_System.git&quot;,
-    &quot;accountId&quot;: &quot;b8fe87b2-c789-41be-ae71-8a042955bbcc&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ViweJax/Hospital_Management_System.git",
+    "accountId": "561e70e1-6883-49be-bef5-bdcd90b3807e"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -81,7 +80,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="63c6d962-3f1e-478e-a69d-6a91b493b63a" name="Changes" comment="" />
+      <changelist id="f07c7a39-7943-418a-89ea-13abc758df8b" name="Changes" comment="Jamie Code" />
       <created>1742245623957</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -95,6 +94,7 @@
       <workItem from="1743018001158" duration="3821000" />
       <workItem from="1743027244276" duration="808000" />
       <workItem from="1743054872069" duration="1026000" />
+      <workItem from="1743110072299" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="My Basecode">
       <option name="closed" value="true" />
