@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
- class PatientRepositoryTest {
+class PatientRepositoryTest {
 
     private static IPatientRepository repository = PatientRepository.getRepository();
 
