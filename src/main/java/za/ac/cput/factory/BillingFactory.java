@@ -2,7 +2,9 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.Billing;
 import za.ac.cput.util.Helper;
-import java.util.Date;
+
+import java.time.LocalDate;
+
 /* Billing.Java
    Billing Class
    Author: Aviwe Jaxa 222208546
@@ -10,9 +12,9 @@ import java.util.Date;
  */
 
 public class BillingFactory {
-    public static Billing createBilling(String billId, Date billingDate, String patientFirstName,
-    String patientLastName,double medicalCharges, double hospitalCharges,double finalAmount,
-    String paymentStatus, String paymentMethod, String insuranceProvider, String doctorFirstName,
+    public static Billing createBilling(String billId, LocalDate billingDate, String patientFirstName,
+                                        String patientLastName, double medicalCharges, double hospitalCharges, double finalAmount,
+                                        String paymentStatus, String paymentMethod, String insuranceProvider, String doctorFirstName,
                                         String doctorLastName){
         if (Helper.isNullOrEmpty(billId) ||
                 Helper.isNullOrEmpty(patientFirstName) ||
