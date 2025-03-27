@@ -87,52 +87,52 @@ Date: 18 March 2025
             private String appointReason;
             private String paymentStatus;
 
-            public void setAppointmentID(String appointmentID) {
+            public AppointmentBuilder setAppointmentID(String appointmentID) {
                 this.appointmentID = appointmentID;
                 return this;
             }
 
-            public void setPatientID(String patientID) {
+            public AppointmentBuilder setPatientID(String patientID) {
                 this.patientID = patientID;
                 return this;
             }
 
-            public void setPatientFirstName(String patientFirstName) {
+            public AppointmentBuilder setPatientFirstName(String patientFirstName) {
                 this.patientFirstName = patientFirstName;
                 return this;
             }
 
-            public void setPatientLastName(String patientLastName) {
+            public AppointmentBuilder setPatientLastName(String patientLastName) {
                 this.patientLastName = patientLastName;
                 return this;
             }
 
-            public void setAppointmentType(String appointmentType) {
+            public AppointmentBuilder setAppointmentType(String appointmentType) {
                 this.appointmentType = appointmentType;
                 return this;
             }
 
-            public void setAppointmentStatus(String appointmentStatus) {
+            public AppointmentBuilder setAppointmentStatus(String appointmentStatus) {
                 AppointmentStatus = appointmentStatus;
                 return this;
             }
 
-            public void setAppointmentDate(LocalDate appointmentDate) {
+            public AppointmentBuilder setAppointmentDate(LocalDate appointmentDate) {
                 AppointmentDate = appointmentDate;
                 return this;
             }
 
-            public void setAppointmentTime(LocalTime appointmentTime) {
+            public AppointmentBuilder setAppointmentTime(LocalTime appointmentTime) {
                 AppointmentTime = appointmentTime;
                 return this;
             }
 
-            public void setAppointReason(String appointReason) {
+            public AppointmentBuilder setAppointReason(String appointReason) {
                 this.appointReason = appointReason;
                 return this;
             }
 
-            public void setPaymentStatus(String paymentStatus) {
+            public AppointmentBuilder setPaymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
                 return this;
             }

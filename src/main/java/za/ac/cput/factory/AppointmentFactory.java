@@ -18,7 +18,7 @@ public class AppointmentFactory {
     public static Appointment createAppointment(String appointmentID, String patientID, String patientFirstName, String patientLastName, String appointmentType,
                                                 String AppointmentStatus, LocalDate AppointmentDate, LocalTime AppointmentTime, String appointReason, String paymentStatus) {
 
-        if (    Helper.isNullOrEmpty(appointmentID) ||
+        if ( Helper.isNullOrEmpty(appointmentID) ||
                 Helper.isNullOrEmpty(patientID) ||
                 Helper.isNullOrEmpty(patientFirstName) ||
                 Helper.isNullOrEmpty(patientLastName) ||

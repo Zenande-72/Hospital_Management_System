@@ -68,7 +68,7 @@ public class AppointmentRepository implements IAppointmentRepository {
         Appointment appointmentToDelete = read(id);
         if (appointmentToDelete == null)
             return false;
-            return (appointmentList.remove(appointmentToDelete));
+        return (appointmentList.remove(appointmentToDelete));
     }
 
     @Override
