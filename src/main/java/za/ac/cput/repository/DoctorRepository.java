@@ -16,8 +16,9 @@ public class DoctorRepository implements IDoctorRepository{
     private List<Doctor> doctorList;
 
     private DoctorRepository(){
-        doctorList=new ArrayList<Doctor>();
+        doctorList = new ArrayList<Doctor>();
     }
+
 
     public static IDoctorRepository getRepository(){
         if(repository==null)

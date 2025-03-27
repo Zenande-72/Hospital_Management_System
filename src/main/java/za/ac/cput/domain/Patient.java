@@ -67,6 +67,11 @@ public class Patient {
         private String gender;
         private LocalDate dateOfBirth;
 
+        public Builder setPatientID(String patientID) {
+            this.patientID = patientID;
+            return this;
+        }
+
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
@@ -103,5 +108,7 @@ public class Patient {
         }
 
         public Patient build() { return new Patient (this);}
+
+
     }
 }

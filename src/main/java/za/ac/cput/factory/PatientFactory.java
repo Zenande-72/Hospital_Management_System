@@ -8,9 +8,11 @@ Date: 22 March 2025
 
 import za.ac.cput.domain.Patient;
 
+import java.time.LocalDate;
+
 public class PatientFactory {
 
-    public static Patient createPatient(String firstName, String lastName, String cellNumber, String gender, String dateOfBirth) {
+    public static Patient createPatient(String patientID, String firstName, String lastName, String cellNumber, String gender, LocalDate dateOfBirth) {
         if (firstName.isEmpty() || firstName == null)
             return null;
 
@@ -23,10 +25,11 @@ public class PatientFactory {
         if (gender.isEmpty() || gender == null)
             return null;
 
-        if (dateOfBirth.isEmpty() || dateOfBirth == null)
+        if (patientID.isEmpty() || patientID == null)
             return null;
 
-        return new Patient.Builder().setFirstName(firstName)
+        return new Patient.Builder().setPatientID(patientID)
+                .setFirstName(firstName)
                 .setLastName(lastName)
                 .setCellNumber(cellNumber)
                 .setGender(gender)
