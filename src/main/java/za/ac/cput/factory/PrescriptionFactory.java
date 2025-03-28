@@ -15,7 +15,7 @@ Date: 23 March 2025
 
 public class PrescriptionFactory {
     public static Prescription createPrescription(String patientId, String doctorId, String medicineName,
-                                                  String dosage, String duration) {
+                                                  String dosage, String duration, LocalDate dateIssued) {
 
         if (Helper.isNullOrEmpty(patientId) ||
                 Helper.isNullOrEmpty(doctorId) ||

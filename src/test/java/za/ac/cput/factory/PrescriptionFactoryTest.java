@@ -25,8 +25,7 @@ class PrescriptionFactoryTest {
                 "D2002",
                 "Paracetamol",
                 "500mg",
-                "5 days",
-                LocalDate.now()
+                 LocalDate.now()
         );
 
         assertNotNull(prescription);
@@ -42,7 +41,6 @@ class PrescriptionFactoryTest {
                 "D2002",
                 "Paracetamol",
                 "500mg",
-                "5 days",
                 LocalDate.now()
         );
 
@@ -57,7 +55,6 @@ class PrescriptionFactoryTest {
                 "D2002",
                 "",
                 "500mg",
-                "5 days",
                 LocalDate.now()
         );
 
