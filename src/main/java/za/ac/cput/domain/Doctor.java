@@ -1,12 +1,13 @@
 package za.ac.cput.domain;
-
-/*Doctor.java
-Doctor Model Class
-Author: Ashlyn Jordan January (230577644)
-Date: 18th March 2025
- */
+/*
+Doctor.java
+Doctor Class
+Author: Ashlyn Jordan January 230577644
+Date: 18 March 2025
+*/
 
 public class Doctor {
+    private String doctorID;
     private String firstName;
     private String lastName;
     private String specialization;
@@ -15,7 +16,7 @@ public class Doctor {
     private String hospitalAffiliation;
     private String email;
     private String gender;
-    private Boolean availability;
+    private String availability;
 
     public Doctor() {
 
@@ -32,7 +33,11 @@ public class Doctor {
         this.availability = builder.availability;
     }
 
-    public String getFirstName() {
+    public String getDoctorID() {
+    return doctorID;
+}
+
+        public String getFirstName() {
         return firstName;
     }
 
@@ -57,14 +62,15 @@ public class Doctor {
     public String getGender() {
         return gender;
     }
-    public Boolean getAvailability() {
+    public String getAvailability() {
         return availability;
     }
 
     @Override
     public String toString() {
         return "Doctor{" +
-                "firstName='" + firstName + '\'' +
+                "doctorID='" + doctorID + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", specialization='" + specialization + '\'' +
                 ", licenceNumber=" + licenceNumber +
@@ -72,11 +78,12 @@ public class Doctor {
                 ", hospitalAffiliation='" + hospitalAffiliation + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
-                ", availability=" + availability +
+                ", availability='" + availability + '\'' +
                 '}';
     }
 
     public static class Builder {
+        private String doctorID;
         private String firstName;
         private String lastName;
         private String specialization;
@@ -85,46 +92,60 @@ public class Doctor {
         private String hospitalAffiliation;
         private String email;
         private String gender;
-        private Boolean availability;
+        private String availability;
+
+        public Builder setdoctorID(String doctorID) {
+            this.doctorID = doctorID;
+            return this;
+        }
 
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
+
         public Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
+
         public Builder setSpecialization(String specialization) {
             this.specialization = specialization;
             return this;
         }
+
         public Builder setLicenceNumber(int licenceNumber) {
             this.licenceNumber = licenceNumber;
             return this;
         }
+
         public Builder setYearsOfExperience(int yearsOfExperience) {
             this.yearsOfExperience = yearsOfExperience;
             return this;
         }
+
         public Builder setHospitalAffiliation(String hospitalAffiliation) {
             this.hospitalAffiliation = hospitalAffiliation;
             return this;
         }
+
         public Builder setEmail(String email) {
             this.email = email;
             return this;
         }
+
         public Builder setGender(String gender) {
             this.gender = gender;
             return this;
         }
-        public Builder setAvailability(Boolean availability) {
+
+        public Builder setAvailability(String availability) {
             this.availability = availability;
             return this;
         }
 
         public Builder copy(Doctor doctor) {
+            this.doctorID = doctor.getDoctorID();
             this.firstName = doctor.getFirstName();
             this.lastName = doctor.getLastName();
             this.specialization = doctor.getSpecialization();
@@ -142,4 +163,5 @@ public class Doctor {
         }
 
     }
-}
+
+    }

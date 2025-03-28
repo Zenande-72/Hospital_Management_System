@@ -1,10 +1,16 @@
 package za.ac.cput.domain;
 
+import java.time.LocalDate;
 import java.util.Date;
+/* Billing.Java
+   Billing Class
+   Author: Aviwe Jaxa 222208546
+   Date: 18 March 2025
+ */
 
 public class Billing {
     private String billId;
-    private Date billingDate;
+    private LocalDate billingDate;
     private String patientFirstName;
     private String patientLastName;
     private double medicalCharges;
@@ -37,7 +43,7 @@ public Billing() {
         return billId;
     }
 
-    public Date getBillingDate() {
+    public LocalDate getBillingDate() {
         return billingDate;
     }
 
@@ -101,7 +107,7 @@ public Billing() {
 
     public static class Builder{
         private String billId;
-        private Date billingDate;
+        private LocalDate billingDate;
         private String patientFirstName;
         private String patientLastName;
         private double medicalCharges;
@@ -118,7 +124,7 @@ public Billing() {
             return this;
         }
 
-        public Builder setBillingDate(Date billingDate) {
+        public Builder setBillingDate(LocalDate billingDate) {
             this.billingDate = billingDate;
             return this;
         }

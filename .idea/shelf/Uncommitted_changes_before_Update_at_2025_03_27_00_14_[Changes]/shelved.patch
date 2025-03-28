@@ -1,0 +1,89 @@
+Index: src/main/java/za/ac/cput/factory/BillingFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package za.ac.cput.factory;\r\n\r\nimport za.ac.cput.domain.Billing;\r\nimport za.ac.cput.util.Helper;\r\nimport java.util.Date;\r\n/* Billing.Java\r\n   Billing Class\r\n   Author: Aviwe Jaxa 222208546\r\n   Date: 18 March 2025\r\n */\r\n\r\npublic class BillingFactory {\r\n    public static Billing createBilling(String billId, Date billingDate, String patientFirstName,\r\n    String patientLastName,double medicalCharges, double hospitalCharges,double finalAmount,\r\n    String paymentStatus, String paymentMethod, String insuranceProvider, String doctorFirstName,\r\n                                        String doctorLastName){\r\n        if (Helper.isNullOrEmpty(billId) ||\r\n                Helper.isNullOrEmpty(patientFirstName) ||\r\n                Helper.isNullOrEmpty(String.valueOf(medicalCharges)) ||\r\n                Helper.isNullOrEmpty(String.valueOf(hospitalCharges)) ||\r\n                Helper.isNullOrEmpty(String.valueOf(finalAmount))||\r\n                Helper.isNullOrEmpty(insuranceProvider) ||\r\n                Helper.isNullOrEmpty(doctorFirstName) )\r\n\r\n        return null;\r\n\r\n        return new Billing.Builder().setBillId(billId)\r\n                .setBillingDate(billingDate)\r\n                .setPatientFirstName(patientFirstName)\r\n                .setPatientLastName(patientLastName)\r\n                .setMedicalCharges(medicalCharges)\r\n                .setHospitalCharges(hospitalCharges)\r\n                .setFinalAmount(finalAmount)\r\n                .setPaymentStatus(paymentStatus)\r\n                .setPaymentMethod(paymentMethod)\r\n                .setInsuranceProvider(insuranceProvider)\r\n                .setDoctorFirstName(doctorFirstName)\r\n                .setDoctorLastName(doctorLastName)\r\n                .build();\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/factory/BillingFactory.java b/src/main/java/za/ac/cput/factory/BillingFactory.java
+--- a/src/main/java/za/ac/cput/factory/BillingFactory.java	(revision aebf40f1dd1a2ce070d2a459fd53b6461fb1deb6)
++++ b/src/main/java/za/ac/cput/factory/BillingFactory.java	(date 1743022382889)
+@@ -2,7 +2,9 @@
+ 
+ import za.ac.cput.domain.Billing;
+ import za.ac.cput.util.Helper;
+-import java.util.Date;
++
++import java.time.LocalDate;
++
+ /* Billing.Java
+    Billing Class
+    Author: Aviwe Jaxa 222208546
+@@ -10,9 +12,9 @@
+  */
+ 
+ public class BillingFactory {
+-    public static Billing createBilling(String billId, Date billingDate, String patientFirstName,
+-    String patientLastName,double medicalCharges, double hospitalCharges,double finalAmount,
+-    String paymentStatus, String paymentMethod, String insuranceProvider, String doctorFirstName,
++    public static Billing createBilling(String billId, LocalDate billingDate, String patientFirstName,
++                                        String patientLastName, double medicalCharges, double hospitalCharges, double finalAmount,
++                                        String paymentStatus, String paymentMethod, String insuranceProvider, String doctorFirstName,
+                                         String doctorLastName){
+         if (Helper.isNullOrEmpty(billId) ||
+                 Helper.isNullOrEmpty(patientFirstName) ||
+Index: src/main/java/za/ac/cput/domain/Billing.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package za.ac.cput.domain;\r\n\r\nimport java.util.Date;\r\n/* Billing.Java\r\n   Billing Class\r\n   Author: Aviwe Jaxa 222208546\r\n   Date: 18 March 2025\r\n */\r\n\r\npublic class Billing {\r\n    private String billId;\r\n    private Date billingDate;\r\n    private String patientFirstName;\r\n    private String patientLastName;\r\n    private double medicalCharges;\r\n    private double hospitalCharges;\r\n    private double finalAmount;\r\n    private String paymentStatus;\r\n    private String paymentMethod;\r\n    private String insuranceProvider;\r\n    private String doctorFirstName;\r\n    private String doctorLastName;\r\n\r\npublic Billing() {\r\n\r\n}\r\n    public Billing(Builder builder){\r\n    this.billId = builder.billId;\r\n    this.billingDate = builder.billingDate;\r\n    this.patientFirstName = builder.patientFirstName;\r\n    this.patientLastName = builder.patientLastName;\r\n    this.medicalCharges = builder.medicalCharges;\r\n    this.hospitalCharges = builder.hospitalCharges;\r\n    this.finalAmount = builder.finalAmount;\r\n    this.paymentStatus = builder.paymentStatus;\r\n    this.paymentMethod = builder.paymentMethod;\r\n    this.insuranceProvider = builder.insuranceProvider;\r\n    this.doctorFirstName = builder.doctorFirstName;\r\n    this.doctorLastName = builder.doctorLastName;\r\n    }\r\n    public String getBillId() {\r\n        return billId;\r\n    }\r\n\r\n    public Date getBillingDate() {\r\n        return billingDate;\r\n    }\r\n\r\n    public String getPatientFirstName() {\r\n        return patientFirstName;\r\n    }\r\n\r\n    public String getPatientLastName() {\r\n        return patientLastName;\r\n    }\r\n\r\n    public double getMedicalCharges() {\r\n        return medicalCharges;\r\n    }\r\n\r\n    public double getHospitalCharges() {\r\n        return hospitalCharges;\r\n    }\r\n\r\n    public double getFinalAmount() {\r\n        return finalAmount;\r\n    }\r\n\r\n    public String getPaymentStatus() {\r\n        return paymentStatus;\r\n    }\r\n\r\n    public String getPaymentMethod() {\r\n        return paymentMethod;\r\n    }\r\n\r\n    public String getInsuranceProvider() {\r\n        return insuranceProvider;\r\n    }\r\n\r\n    public String getDoctorFirstName() {\r\n        return doctorFirstName;\r\n    }\r\n\r\n    public String getDoctorLastName() {\r\n        return doctorLastName;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Billing{\" +\r\n                \"billId='\" + billId + '\\'' +\r\n                \", billingDate=\" + billingDate +\r\n                \", patientFirstName='\" + patientFirstName + '\\'' +\r\n                \", patientLastName='\" + patientLastName + '\\'' +\r\n                \", medicalCharges=\" + medicalCharges +\r\n                \", hospitalCharges=\" + hospitalCharges +\r\n                \", finalAmount=\" + finalAmount +\r\n                \", paymentStatus='\" + paymentStatus + '\\'' +\r\n                \", paymentMethod='\" + paymentMethod + '\\'' +\r\n                \", insuranceProvider='\" + insuranceProvider + '\\'' +\r\n                \", doctorFirstName='\" + doctorFirstName + '\\'' +\r\n                \", doctorLastName='\" + doctorLastName + '\\'' +\r\n                '}';\r\n    }\r\n\r\n    public static class Builder{\r\n        private String billId;\r\n        private Date billingDate;\r\n        private String patientFirstName;\r\n        private String patientLastName;\r\n        private double medicalCharges;\r\n        private double hospitalCharges;\r\n        private double finalAmount;\r\n        private String paymentStatus;\r\n        private String paymentMethod;\r\n        private String insuranceProvider;\r\n        private String doctorFirstName;\r\n        private String doctorLastName;\r\n\r\n        public Builder setBillId(String billId) {\r\n            this.billId = billId;\r\n            return this;\r\n        }\r\n\r\n        public Builder setBillingDate(Date billingDate) {\r\n            this.billingDate = billingDate;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPatientFirstName(String patientFirstName) {\r\n            this.patientFirstName = patientFirstName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPatientLastName(String patientLastName) {\r\n            this.patientLastName = patientLastName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setMedicalCharges(double medicalCharges) {\r\n            this.medicalCharges = medicalCharges;\r\n            return this;\r\n        }\r\n\r\n        public Builder setHospitalCharges(double hospitalCharges) {\r\n            this.hospitalCharges = hospitalCharges;\r\n            return this;\r\n        }\r\n\r\n        public Builder setFinalAmount(double finalAmount) {\r\n            this.finalAmount = finalAmount;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPaymentStatus(String paymentStatus) {\r\n            this.paymentStatus = paymentStatus;\r\n            return this;\r\n        }\r\n\r\n        public Builder setPaymentMethod(String paymentMethod) {\r\n            this.paymentMethod = paymentMethod;\r\n            return this;\r\n        }\r\n\r\n        public Builder setInsuranceProvider(String insuranceProvider) {\r\n            this.insuranceProvider = insuranceProvider;\r\n            return this;\r\n        }\r\n\r\n        public Builder setDoctorFirstName(String doctorFirstName) {\r\n            this.doctorFirstName = doctorFirstName;\r\n            return this;\r\n        }\r\n\r\n        public Builder setDoctorLastName(String doctorLastName) {\r\n            this.doctorLastName = doctorLastName;\r\n            return this;\r\n        }\r\n        public Builder copy (Billing billing){\r\n            this.billId = billing.getBillId();\r\n            this.billingDate = billing.getBillingDate();\r\n            this.patientFirstName = billing.getPatientFirstName();\r\n            this.patientLastName = billing.getPatientLastName();\r\n            this.medicalCharges = billing.getMedicalCharges();\r\n            this.hospitalCharges = billing.getHospitalCharges();\r\n            this.finalAmount = billing.getFinalAmount();\r\n            this.paymentStatus = billing.getPaymentStatus();\r\n            this.paymentMethod = billing.getPaymentMethod();\r\n            this.insuranceProvider = billing.getInsuranceProvider();\r\n            this.doctorFirstName = billing.getDoctorFirstName();\r\n            this.doctorLastName = billing.getDoctorLastName();\r\n            return this;\r\n        }\r\n        public Billing build() {\r\n            return new Billing(this);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/za/ac/cput/domain/Billing.java b/src/main/java/za/ac/cput/domain/Billing.java
+--- a/src/main/java/za/ac/cput/domain/Billing.java	(revision aebf40f1dd1a2ce070d2a459fd53b6461fb1deb6)
++++ b/src/main/java/za/ac/cput/domain/Billing.java	(date 1743022382971)
+@@ -1,6 +1,7 @@
+ package za.ac.cput.domain;
+ 
+-import java.util.Date;
++import java.time.LocalDate;
++
+ /* Billing.Java
+    Billing Class
+    Author: Aviwe Jaxa 222208546
+@@ -9,7 +10,7 @@
+ 
+ public class Billing {
+     private String billId;
+-    private Date billingDate;
++    private LocalDate billingDate;
+     private String patientFirstName;
+     private String patientLastName;
+     private double medicalCharges;
+@@ -42,7 +43,7 @@
+         return billId;
+     }
+ 
+-    public Date getBillingDate() {
++    public LocalDate getBillingDate() {
+         return billingDate;
+     }
+ 
+@@ -106,7 +107,7 @@
+ 
+     public static class Builder{
+         private String billId;
+-        private Date billingDate;
++        private LocalDate billingDate;
+         private String patientFirstName;
+         private String patientLastName;
+         private double medicalCharges;
+@@ -123,7 +124,7 @@
+             return this;
+         }
+ 
+-        public Builder setBillingDate(Date billingDate) {
++        public Builder setBillingDate(LocalDate billingDate) {
+             this.billingDate = billingDate;
+             return this;
+         }
