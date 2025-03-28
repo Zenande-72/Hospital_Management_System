@@ -1,6 +1,7 @@
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Patient;
 
@@ -16,12 +17,14 @@ class PatientFactoryTest {
     private static Patient patient3 = PatientFactory.createPatient("274456389", "87349902", "Vuma", "0812334566", "Female", LocalDate.of(2004, 10, 18));
 
      @Test
+     @Order(1)
     public void testCreatePatient() {
     assertNotNull(patient1);
     System.out.println(patient1.toString());
      }
 
      @Test
+     @Order(2)
      public void testCreatePatientWithAllAttributes() {
          assertNotNull(patient2);
          System.out.println(patient2.toString());
@@ -29,6 +32,7 @@ class PatientFactoryTest {
      }
 
      @Test
+     @Order(3)
      public void testCreatePatientThatFails() {
          assertNotNull(patient3);
          System.out.println(patient3.toString());
@@ -36,6 +40,7 @@ class PatientFactoryTest {
      }
 
      @Test
+     @Order(4)
     @Disabled
     public void testNotImpementedYet(){
 
