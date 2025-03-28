@@ -1,7 +1,6 @@
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Billing;
-
 import java.util.ArrayList;
 import java.util.List;
 
