@@ -1,0 +1,99 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>120</x><y>70</y><w>210</w><h>180</h></coordinates><panel_attributes>_Doctor_
+--
+-DoctorID:String
+-firstName: String
+-lastName: String
+-specialization: String
+-licenceNumber: String
+-yearsOfExperience: int
+-hospitalAffiliation: String
+-email: String
+-gender: String
+-availability: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>80</y><w>210</w><h>180</h></coordinates><panel_attributes>_Appointment_
+--
+-appointmentID: String
+-patientID:Patient
+-patientFirstName: Patient
+-patientLastName: Patient
+-appointmentType: String
+-appointmentStatus: String
+-date: LocalDate
+-time:LocalTime
+-appointmentTime: String
+-paymentStatus: Billing
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>80</y><w>210</w><h>140</h></coordinates><panel_attributes>_Patient_
+--
+-PatientID:String
+-firstName: String
+-lastName: String
+-cellNumber: String
+-gender: String
+-dateOfBirth: LocalDate
+-age: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>400</y><w>210</w><h>210</h></coordinates><panel_attributes>_Billing_
+--
+-billID: String
+-billingDate: Date
+-patientFirstName: Patient
+-patientLastName: Patient
+-medicalCharges: double
+-hospitalCharges: double
+-finalAmount: double
+-paymentStatus:String
+-paymentMethod:String
+-insuranceProvider:String
+-doctorFirstName: Doctor
+-doctorLastName:Doctor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>410</y><w>210</w><h>140</h></coordinates><panel_attributes>_Department_
+--
+-departmentID: String
+-departmentName: String
+-headDoctor: Doctor
+-staffCount: int
+-departmentPhoneNumber: String
+-location: String
+-appointments: List&lt;Appointment&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>400</y><w>210</w><h>370</h></coordinates><panel_attributes>_Prescription_
+--
+-prescriptionID: String
+-patientID: Patient
+-doctorID: Doctor
+-medicineName: String
+-dosage: String
+-duration: String
+-dateIssued: String
+-
++getPrescriptionID(): String
++setPrescriptionID(String)
++getPatientID():String
++setPatientID(String)
++getDoctorID():String
++setDoctorID(String)
++getedisineName():String
++setMedicineName(String)
++getDosage():String
++setDosage(String)
++getDuration():String
++setDuration(String)
++getDateIssued():String
++setDateIssued(String)
++toString():String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>150</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>950</x><y>260</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>490</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>210</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>490</y><w>200</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>240</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>140</y><w>210</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>160</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1:N
+m2=1:N
+</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>110</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>920</x><y>250</y><w>40</w><h>170</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>450</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1:N
+m2=1:N
+</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>210</y><w>50</w><h>210</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..N
+</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>240</y><w>50</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=M:M
+m2=1
+</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>
