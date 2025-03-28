@@ -12,6 +12,7 @@ import za.ac.cput.factory.PrescriptionFactory;
 import za.ac.cput.util.Helper;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,7 +33,6 @@ class PrescriptionRepositoryTest {
                 "D2002",
                 "Paracetamol",
                 "500mg",
-                "5 days",
                 LocalDate.now()
         );
 
@@ -80,7 +80,7 @@ class PrescriptionRepositoryTest {
 
     @Test
     void testGetAll() {
-        Set<Prescription> allPrescriptions = repository.getAll();
-        assertFalse(allPrescriptions.isEmpty());
+        List<Prescription> prescriptionList= repository.getAll();
+        assertFalse(prescriptionList.isEmpty());
     }
 }

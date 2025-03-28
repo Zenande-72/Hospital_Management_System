@@ -1,6 +1,5 @@
 package za.ac.cput.repository;
 
-import za.ac.cput.domain.Department;
 import za.ac.cput.domain.Doctor;
 /*
 DoctorRepository.java
@@ -21,7 +20,7 @@ public class DoctorRepository implements IDoctorRepository{
     }
 
 
-    public static IDoctorRepository getRepository(){
+    public static DoctorRepository getRepository(){
         if(repository==null)
         {
             repository= new DoctorRepository();
